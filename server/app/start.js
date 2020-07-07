@@ -1,9 +1,7 @@
 const Hapi = require('hapi');
 const Boom = require('@hapi/boom');
 const routesLoader = require('../helpers/routesLoader');
-const { mongoConnect, elasticConnect } = require('../configs/connection');
-
-mongoConnect.then(() => require('../helpers/datasetLoader'));
+require('../configs/connection');
 
 const init = async () => {
     const server = Hapi.server({

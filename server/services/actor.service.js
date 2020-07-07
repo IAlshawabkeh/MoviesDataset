@@ -9,25 +9,6 @@ const createActor = (payload) => {
     });
 };
 
-// Actor.createMapping((err, mapping) => {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log(mapping);
-// });
-
-
-// Actor.search({
-//     query_string: {
-//         query: "test"
-//     }, 
-// }, { hydrate: true }, (result, err) => {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log(result);
-// });
-
 const findOneByName = (name) => {
    return Actor.findOne({ name })
 }

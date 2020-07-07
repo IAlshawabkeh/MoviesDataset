@@ -4,11 +4,11 @@ const movieService = require('../services/movie.service');
 
 let numOfRows = 0;
 
-fs.createReadStream('./server/assets/dataset.csv').pipe(csv()).on('data', (row) => {
+const loadDataset = () => fs.createReadStream('./server/assets/dataset.csv').pipe(csv()).on('data', (row) => {
     numOfRows++;
     processMovie(row);
 }).on('end', async () => {
-    console.log(`Successfully initiated insertion to all movies into the DB with a total number of ${numOfRows}`);
+    console.log(`Successfully initiated insertion of all movies into the DB with a total number of ${numOfRows}`);
 });
 
 const processMovie = async (data) => {
@@ -64,3 +64,5 @@ const processMovie = async (data) => {
 
     return movieService.createMovie(payload, director, actors);
 }
+
+module.exports = { loadDataset };
