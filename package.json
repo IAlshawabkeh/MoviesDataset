@@ -1,0 +1,21 @@
+{
+  "name": "movie-dataset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app/start.js"
+  },
+  "author": "Ihab Alshawabkeh",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "csv-parser": "^2.3.3",
+    "hapi": "^18.1.0",
+    "joi": "^14.3.1",
+    "mongoosastic": "^4.6.0",
+    "mongoose": "^5.9.21",
+    "nodemon": "^2.0.4"
+  }
+}
